@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 작성 페이지</title>
+</head>
+<body>
+  <div id="write_area">
+    <form enctype="multipart/form-data" action="write_ok.php?board_id=<?echo $board_id;?>" method="post">
+        <div id="in_title">
+            <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
+        </div>
+
+        <div class="wi_line"></div>
+        <div id="in_content">
+            <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
+        </div>
+
+          <input type="file" name="SelectFile" />
+
+
+        <div class="bt_se">
+            <button type="submit">글 작성</button>
+        </div>
+</body>
+</html>
