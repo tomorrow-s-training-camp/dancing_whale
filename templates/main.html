@@ -1,4 +1,4 @@
-<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형, 최환준) / 버전 2022.12.02. PM 22:00 -->
+<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형, 최환준) / 버전 2022.12.02. PM 23:00 -->
 <!-- 발생오류
 FE
 BE
@@ -108,32 +108,10 @@ BE
 
 <!-- 뉴스피드(MDB부트스트랩) - 시작 -->
 <!-- 출처 : News aggregator / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
+
+<!-- 버튼 색깔 참고용 <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button> -->
 <!--Main layout-->
 <div class="container">
-    <!--Section: News of the day-->
-    <section class="border-bottom pb-4 mb-5">
-        <div class="row gx-5">
-            <div class="col-md-6 mb-4">
-                <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-                    <img src="https://image-aws-us-west-2.vsco.co/54af05/59874457/5c0268255484032233f43361/1136x1136/vsco5c026828226f3.jpg" class="img-fluid"/>
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-<!--                <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">최다 응원글</span>-->
-                <h4><strong>최다 응원글 제목</strong></h4>
-                <p class="text-muted">
-                    최다 응원글 내용
-                </p>
-                <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button>
-            </div>
-        </div>
-    </section>
-    <!--Section: News of the day-->
-
     <!--Section: Content-->
     <section>
         <div class="row gx-lg-5">
@@ -166,10 +144,13 @@ BE
                     <!-- Article title and description -->
                     <a href="" class="text-dark">
                         <h5>작성글 제목</h5>
-
                         <p>
                             작성글 내용
                         </p>
+                        <p style="text-align: center;">
+                            댓글수 00
+                        </p>
+
                     </a>
 
                     <hr/>
@@ -213,6 +194,10 @@ BE
                         <p>
                             작성글 내용
                         </p>
+
+                        <p style="text-align: center;">
+                            댓글수 00
+                        </p>
                     </a>
 
                     <hr/>
@@ -253,6 +238,10 @@ BE
 
                         <p>
                             작성글 내용
+                        </p>
+
+                        <p style="text-align: center;">
+                            댓글수 00
                         </p>
                     </a>
 
