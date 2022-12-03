@@ -22,7 +22,9 @@
 <!-- 네비게이션 바 아이디 패스워드 https://cloudstudying.kr/lectures/73
 전체적인 HTML구조 https://blog.naver.com/PostView.naver?blogId=heartflow89&logNo=221115916689&categoryNo=139&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView&userTopListOpen=true&userTopListCount=5&userTopListManageOpen=false&userTopListCurrentPage=1 -->
 
+
 <body>
+	<!-- 네비게이션 바 -->
   <header>
     <nav class="navbar bg-light">
       <div class="container-fluid">
@@ -32,21 +34,29 @@
         </a>
       </div>
     </nav>
+		<!-- 네비게이션 바 끝 -->
+
+		<!-- 아이디 기능  -->
     <label>ID: </label>
     <input type="text" name="user_ID_1" id="user_ID"><br>
     <label>PW: </label>
     <input type="text" name="user_PW_1" id="user_PW">
-
   </header>
+		<!-- 아이디 기능 끝 -->
+
+		<!-- 프로필이미지  -->
   <div class="box" style="background: #BDBDBD;">
     <img class="profile" src="https://cdn-icons-png.flaticon.com/512/2948/2948035.png">
   </div>
+	<!-- 프로필 이미지 끝 -->
+
+	<!-- 회원정보 기입창 -->
 			<div>
 				<form id="myForm" action="../member/update_mypage.do" method="post">
           <p>
 						<label>이메일</label> 
 						<input type="text" id="user_EMAIL" name="user_EMAIL_1" readonly value="${ user_email }"> 
-            <!-- readonly=읽기전용을 설정하는 코드 수정 불가 -->
+            <!-- readonly=읽기전용을 설정하는 코드,내용 수정 불가 -->
 					</p>
 					<p>
 						<label>닉네임 변경</label> 
@@ -56,7 +66,9 @@
 						<button type="submit" >회원정보 변경</button>
 					</p>
 				</form>
-				<br />
+				<!-- 회원정보창 끝 -->
+
+				<!-- 비밀번호  -->
 				<form id="pwForm" action="../member/update_pw.do" method="post">	
 					<input type="hidden" name="id" value="${ member.id }">
 					<p>
@@ -76,6 +88,7 @@
 						<button type="submit">비밀번호 변경</button>
 					</p>
 				</form>
+				<!-- 비밀번호 끝 -->
 			</div>
 		</div>
 	</div>
