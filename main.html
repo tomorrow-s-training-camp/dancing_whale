@@ -1,0 +1,245 @@
+<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형, 최환준) / 버전 2022.12.03. AM 11:30 -->
+<!-- 발생오류
+FE
+BE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+
+    <!-- MDB 삽입 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+          rel="stylesheet"/>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
+    </script>
+  </head>
+</head>
+
+<style>
+     /* 네비게이션바 - 시작 */
+    :root {
+        --text-color: white;
+        --background-color: #73A0F3;
+        --accent-color: orange;
+        --icons-color: rgb(152, 187, 201);
+        --bodybackground-color: #EFF0F4;
+
+    }
+     /* #8BCAFF #FFF4C8 #22A7FF #FFDCA7 #263343 */
+
+    body {
+      margin: 0;
+      background-color: var(--bodybackground-color);
+      font-family: 'STIX Two Math';
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        padding: 8px 12px;
+        font-family: 'STIX Two Math';
+    }
+
+    .navbar__logo i {
+        color: var(--accent-color);
+        padding-left: 0;
+    }
+
+    .navbar__menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .navbar__menu li {
+        padding: 8px 30px;
+    }
+
+    .navbar__icons {
+        list-style: none;
+        display: flex;
+        color: var(--icons-color);
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .navbar__icons li {
+        padding: 8px 12px;
+        margin: 0;
+    }
+    /* 네비게이션바 - 끝 */
+</style>
+
+<body>
+    <!-- 네비게이션바 - 시작 -->
+    <!-- 출처 : https://axce.tistory.com/43 -->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-blog"></i>
+        <a href="">Dancing whalE</a>
+      </div>
+
+      <ul class="navbar__menu">
+        <li><a href="#">로그인</a></li>
+      </ul>
+
+      <ul class="navbar__icons">
+        <li><i class="fab fa-google"></i></li>
+        <li><i class="fab fa-slack"></i></li>
+      </ul>
+
+    </nav>
+    <!-- 네비게이션바 - 끝 -->
+
+<!-- 뉴스피드(MDB부트스트랩) - 시작 -->
+<!-- 출처 : News aggregator / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
+
+<!-- 버튼 색깔 참고용 <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button> -->
+<!--Main layout-->
+<div class="container">
+    <!--Section: Content-->
+    <section>
+        <div class="row gx-lg-5">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <!-- News block -->
+                <div>
+                    <!-- Featured image -->
+                    <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4"
+                         data-mdb-ripple-color="light">
+                        <img src="https://cdn.imweb.me/upload/S201807025b39d1981b0b0/16b98d3e3d30e.jpg" class="img-fluid"/>
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+
+                    <!-- Article data -->
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <a href="" class="text-info">
+                                <i class="fas fa-plane"></i>
+                                작성자명
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article title and description -->
+                    <a href="" class="text-dark">
+                        <h5>작성글 제목</h5>
+                        <p>
+                            작성글 내용
+                        </p>
+                        <p style="text-align: center;">
+                            댓글수 00
+                        </p>
+
+                    </a>
+
+                    <hr/>
+                    <!-- 설명 : <hr> 태그는 콘텐츠 내용에서 주제가 바뀔 때 사용할 수 있는 수평 가로선을 정의할 때 사용합니다.
+                               <hr> 요소는 HTML 문서에서 내용을 구분하거나 주제의 변화를 정의합니다. http://www.tcpschool.com/html-tags/hr -->
+                </div>
+                <!-- News block -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- News block -->
+                <div>
+                    <!-- Featured image -->
+                    <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4"
+                         data-mdb-ripple-color="light">
+                        <img src="https://i.pinimg.com/originals/ef/9a/77/ef9a77001c89c32bce4627e5c6307fc2.jpg" class="img-fluid"
+                             alt="Brooklyn Bridge"/>
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+
+                    <!-- Article data -->
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <a href="" class="text-danger">
+                                <i class="fas fa-chart-pie"></i>
+                                작성자명
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article title and description -->
+                    <a href="" class="text-dark">
+                        <h5>작성글 제목</h5>
+
+                        <p>
+                            작성글 내용
+                        </p>
+
+                        <p style="text-align: center;">
+                            댓글수 00
+                        </p>
+                    </a>
+
+                    <hr/>
+                </div>
+                <!-- News block -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <!-- News block -->
+                <div>
+                    <!-- Featured image -->
+                    <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4"
+                         data-mdb-ripple-color="light">
+                        <img src="https://ifh.cc/g/g1k5RH.jpg" class="img-fluid"
+                             alt="Golden Gate National Recreation Area"/>
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+
+                    <!-- Article data -->
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <a href="" class="text-warning">
+                                <i class="fas fa-code"></i>
+                                작성자명
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article title and description -->
+                    <a href="" class="text-dark">
+                        <h5>작성글 제목</h5>
+
+                        <p>
+                            작성글 내용
+                        </p>
+
+                        <p style="text-align: center;">
+                            댓글수 00
+                        </p>
+                    </a>
+
+                    <hr/>
+                </div>
+                <!-- News block -->
+            </div>
+        </div>
+    </section>
+    <!-- Section: Content -->
+    <!-- 뉴스피드(MDB부트스트랩) - 끝 -->
+</body>
+</html>
