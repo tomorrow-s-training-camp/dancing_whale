@@ -1,0 +1,108 @@
+<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형) / 버전 2022.12.03. AM 11:20 -->
+<!-- 발생오류
+FE
+BE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- MDB 삽입 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+          rel="stylesheet"/>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+<!-- 게시글 조회 - 시작 -->
+<!-- 출처 : Social media newsfeed v.1 / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
+<!--Section: Newsfeed-->
+<section>
+  <div class="card" style="max-width: 42rem">
+    <div class="card-body">
+      <!-- Data -->
+      <div class="d-flex mb-3">
+        <a href="">
+        </a>
+        <div>
+          <a href="" class="text-dark mb-0">
+            <strong>게시글 제목</strong>
+          </a>
+          <a href="" class="text-muted d-block" style="margin-top: -6px">
+            <small>작성자 이름</small>
+          </a>
+        </div>
+      </div>
+      <!-- Description -->
+      <div>
+        <p>
+          게시글 내용
+        </p>
+      </div>
+    </div>
+    <!-- Media -->
+    <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+      <img src="https://cdn.imweb.me/upload/S201807025b39d1981b0b0/16b98d3e3d30e.jpg" class="w-100" />
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+      </a>
+    </div>
+    <!-- Media -->
+    <!-- Interactions -->
+    <div class="card-body">
+      <!-- Reactions -->
+        <div>
+          <a href="" class="text-muted">댓글 8 </a>
+        </div>
+      </div>
+      <!-- Reactions -->
+
+      <!-- 게시글 조회 - 끝 -->
+
+      <!-- 댓글 작성 - 시작 -->
+      <!-- Input -->
+      <div class="d-flex mb-3">
+        <div class="form-outline w-100">
+          <textarea class="form-control" id="textAreaExample" rows="2"></textarea>
+          <label class="form-label" for="textAreaExample">댓글을 작성해주세요.</label>
+        </div>
+      </div>
+      <!-- Input -->
+      <!-- 댓글 작성 - 끝 -->
+
+      <!-- 댓글 조회 - 시작 -->
+      <!-- Single answer -->
+      <div class="d-flex mb-3">
+        <div>
+          <div class="bg-light rounded-3 px-3 py-1">
+            <a href="" class="text-dark mb-0">
+              <strong>댓글 작성자 이름</strong>
+            </a>
+            <a href="" class="text-muted d-block">
+              <small>댓글 내용</small>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 댓글 조회 - 끝 -->
+    <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+    </div>
+    <!-- Interactions -->
+  </div>
+</section>
+<!--Section: Newsfeed-->
+
+</body>
+</html>

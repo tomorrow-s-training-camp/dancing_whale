@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     /* 네비게이션바 - 시작 */
+    :root {
+        --text-color: white;
+        --background-color: #73A0F3;
+        --accent-color: orange;
+        --icons-color: rgb(152, 187, 201);
+        --bodybackground-color: #EFF0F4;
+
+    }
+     /* #8BCAFF #FFF4C8 #22A7FF #FFDCA7 #263343 */
+
+    body {
+      margin: 0;
+      background-color: var(--bodybackground-color);
+      font-family: 'STIX Two Math';
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        padding: 8px 12px;
+        font-family: 'STIX Two Math';
+    }
+
+    .navbar__logo i {
+        color: var(--accent-color);
+        padding-left: 0;
+    }
+
+    .navbar__menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .navbar__menu li {
+        padding: 8px 30px;
+    }
+
+    .navbar__icons {
+        list-style: none;
+        display: flex;
+        color: var(--icons-color);
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .navbar__icons li {
+        padding: 8px 12px;
+        margin: 0;
+    }
+    /* 네비게이션바 - 끝 */
+
+</style>
+
+
+<body>
+    <!-- 네비게이션바 - 시작 -->
+    <!-- 출처 : https://axce.tistory.com/43 -->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <i class="fas fa-blog"></i>
+        <a href="">Dancing whalE</a>
+      </div>
+
+      <ul class="navbar__menu">
+        <li><a href="#">로그인</a></li>
+      </ul>
+
+      <ul class="navbar__icons">
+        <li><i class="fab fa-google"></i></li>
+        <li><i class="fab fa-slack"></i></li>
+      </ul>
+
+    </nav>
+    <!-- 네비게이션바 - 끝 -->
+
+    <!-- 게시글 작성 및 파일 업로드-->
+<form action = "주소를 적으세요" method = "post" enctype="multipart/form-data">
+    <div class = "posting">
+        <input class = "posting_title" name = "create_title" type = "text" placeholder = "제목"/>
+        <textarea class = "posting_contents" name = "create_body" placeholder = "내용"></textarea>
+        <input class = "upload" name = "upload_file" type = "file" accept = "image/png, image/jpeg"/>
+        <input class = "writeBtn" type = "submit">
+    </div>
+</form>
+
+<!-- 출처 https://hanuscrypto.tistory.com/entry/Php%EB%A1%9C-%EC%9B%B9-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0-%EA%B2%8C%EC%8B%9C%ED%8C%90-%EB%A7%8C%EB%93%A4%EA%B8%B012-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-1-->
+
