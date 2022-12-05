@@ -1,112 +1,47 @@
-<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형, 최환준) / 버전 2022.12.04. PM 12:00 -->
-<!-- 발생오류
-FE
-BE
--->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인페이지</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- MDB 삽입 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-          rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
-    </script>
-  </head>
-</head>
+        <!-- MDB 삽입 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
 
-<style>
-     /* 네비게이션바 - 시작 */
-    :root {
-        --text-color: white;
-        --background-color: #73A0F3;
-        --accent-color: orange;
-        --icons-color: rgb(152, 187, 201);
-        --bodybackground-color: #EFF0F4;
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-    }
-     /* #8BCAFF #FFF4C8 #22A7FF #FFDCA7 #263343 */
+		
+		<title>Dancing whalE</title>
+	</head>
+    <body>
+			<div class="row h-100">
+				<div class="col-sm-12 my-auto white-text text-center">
+					<div class="container">
+                    <h6>
+                    <a>Dancing whalE</a>
+					{% if logininfo %}
+					<a>{{logininfo}}님</a>
+					{% endif %}
+					{% if logininfo %}
+					<a href="/post">게시판가기</strong></font></a> <font color="white" size=6>&middot;&nbsp;</font>
+					<a href="/logout">로그아웃</a>
+					{% else %}   
+					<a href="/login">로그인</a>
+					<a href="/regist">회원가입</a>
+					{% endif %}
+                    </h6>
+				</div>
+				</div>
 
-    body {
-      margin: 0;
-      background-color: var(--bodybackground-color);
-      font-family: 'STIX Two Math';
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--text-color);
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--background-color);
-        padding: 8px 12px;
-        font-family: 'STIX Two Math';
-    }
-
-    .navbar__logo i {
-        color: var(--accent-color);
-        padding-left: 0;
-    }
-
-    .navbar__menu {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding-left: 0;
-    }
-
-    .navbar__menu li {
-        padding: 8px 30px;
-    }
-
-    .navbar__icons {
-        list-style: none;
-        display: flex;
-        color: var(--icons-color);
-        margin: 0;
-        padding-left: 0;
-    }
-
-    .navbar__icons li {
-        padding: 8px 12px;
-        margin: 0;
-    }
-    /* 네비게이션바 - 끝 */
-</style>
-
-<body>
-    <!-- 네비게이션바 - 시작 -->
-    <!-- 출처 : https://axce.tistory.com/43 -->
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <i class="fas fa-blog"></i>
-        <a href="">Dancing whalE</a>
-      </div>
-
-      <ul class="navbar__menu">
-        <li><a href="#">로그인</a></li>
-      </ul>
-
-      <ul class="navbar__icons">
-        <li><i class="fab fa-google"></i></li>
-        <li><i class="fab fa-slack"></i></li>
-      </ul>
-
-    </nav>
-    <!-- 네비게이션바 - 끝 -->
-
-<!-- 뉴스피드(MDB부트스트랩) - 시작 -->
+            <!-- 뉴스피드(MDB부트스트랩) - 시작 -->
 <!-- 출처 : News aggregator / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
 
 <!-- 버튼 색깔 참고용 <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button> -->
@@ -241,5 +176,5 @@ BE
     </section>
     <!-- Section: Content -->
     <!-- 뉴스피드(MDB부트스트랩) - 끝 -->
-</body>
+    </body>
 </html>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dancingwhale.iml" filepath="$PROJECT_DIR$/.idea/dancingwhale.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flask-board-practice.iml" filepath="$PROJECT_DIR$/.idea/flask-board-practice.iml" />
     </modules>
   </component>
 </project>

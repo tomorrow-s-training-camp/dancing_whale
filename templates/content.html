@@ -1,24 +1,19 @@
-<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형) / 버전 2022.12.04. PM 12:00 -->
-<!-- 발생오류
-FE
-BE
--->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>viewpost</title>
-    <!-- MDB 삽입 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-          rel="stylesheet"/>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<title>Dancing whalE｜게시글 작성</title>
+	</head>
+	<body>
+		<br>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
-    </script>
-</head>
-
-<body>
-<!-- 게시글 조회 - 시작 -->
+    <!-- 게시글 조회 - 시작 -->
 <!-- 출처 : Social media newsfeed v.1 / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
 <!--Section: Newsfeed-->
 <section>
@@ -30,7 +25,8 @@ BE
         </a>
         <div>
           <a href="" class="text-dark mb-0">
-            <strong>게시글 제목</strong>
+              {% for data_ in data %}
+            <strong>{{data_['title']}}</strong>
           </a>
           <a href="" class="text-muted d-block" style="margin-top: -6px">
             <small>작성자 이름</small>
@@ -40,7 +36,7 @@ BE
       <!-- Description -->
       <div>
         <p>
-          게시글 내용
+          {{data_['content']}}
         </p>
       </div>
     </div>
@@ -90,10 +86,16 @@ BE
       </div>
       <!-- 댓글 조회 - 끝 -->
     </div>
+    <div class="card-footer">
+						<a href="/post/edit/{{data_['id']}}" class="card-link">수정하기</a>
+						<a href="/post/delete/{{data_['id']}}" class="card-link">삭제하기</a>
+						<a href="/post" class="card-link">목록으로</a>
+					</div>
+					{% endfor %}
     <!-- Interactions -->
   </div>
 </section>
 <!--Section: Newsfeed-->
 
-</body>
+	</body>
 </html>
