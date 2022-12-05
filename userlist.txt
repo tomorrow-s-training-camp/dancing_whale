@@ -1,0 +1,24 @@
+mysql> CREATE DATABASE userlist;
+
+mysql> use userlist
+
+mysql> CREATE TABLE tbl_user (
+     > user_name VARCHAR(20) NOT NULL,
+     > user_password VARCHAR(20) NOT NULL,
+     > PRIMARY KEY (user_name)
+     > );
+
+-------------------------
+mysql> CREATE TABLE board (
+    -> id int(11) unsigned NOT NULL auto_increment,
+    -> name VARCHAR(20) NULL,
+    -> pass VARCHAR(100) NULL,
+    -> title VARCHAR(70) NULL,
+    -> content TEXT NULL,
+    -> wdate TIMESTAMP ON UPDATE CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL;
+    -> view int(11) NOT NULL DEFAULT '0',
+    -> PRIMARY KEY (id)
+    -> );
+
+-------------------------
+wdate 생성시간만 알고싶다면 wdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
