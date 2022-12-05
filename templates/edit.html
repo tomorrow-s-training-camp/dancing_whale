@@ -1,7 +1,10 @@
+<!-- 2022.12.02. 구현 시작일 (코드 작성자 : 이보형) / 버전 2022.12.05. PM 17:00 -->
+
 <!DOCTYPE html>
 <html lang="en">
  
 <head>
+    <meta charset="UTF-8">
     <title>Dancing whalE｜게시글 수정</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -37,6 +40,62 @@
                             <textarea class="form-control" id="txtPost" name="content" placeholder="내용을 입력하세요." style="height:260px;" required>{{data_['content']}}</textarea>
                         </div>
                     </div>
+                     <!-- 중간삽입 : 사진첨부 - 시작 -->
+                        <!-- 출처 : https://iamiet.tistory.com/m/68 -->
+                        <input type="file" class="real-upload" accept="image/*" required multiple>
+                        <div class="upload"></div>
+                        <ul class="image-preview"></ul>
+
+                        <script>
+                            function getImageFiles(e) {
+                                const uploadFiles = [];
+                                const files = e.currentTarget.files;
+                                const imagePreview = document.querySelector('.image-preview');
+                                const docFrag = new DocumentFragment();
+
+                                if ([...files].length >= 7) {
+                                    alert('이미지는 최대 6개 까지 업로드가 가능합니다.');
+                                    return;
+                                }
+
+                                // 파일 타입 검사
+                                [...files].forEach(file => {
+                                    if (!file.type.match("image/.*")) {
+                                        alert('이미지 파일만 업로드가 가능합니다.');
+                                        return
+                                    }
+
+                                    // 파일 개수 검사
+                                    if ([...files].length < 7) {
+                                        uploadFiles.push(file);
+                                        const reader = new FileReader();
+                                        reader.onload = (e) => {
+                                            const preview = createElement(e, file);
+                                            imagePreview.appendChild(preview);
+                                        };
+                                        reader.readAsDataURL(file);
+                                    }
+                                });
+                            }
+
+                            function createElement(e, file) {
+                                const li = document.createElement('li');
+                                const img = document.createElement('img');
+                                img.setAttribute('src', e.target.result);
+                                img.setAttribute('data-file', file.name);
+                                li.appendChild(img);
+
+                                return li;
+                            }
+
+                            const realUpload = document.querySelector('.real-upload');
+                            const upload = document.querySelector('.upload');
+
+                            upload.addEventListener('click', () => realUpload.click());
+
+                            realUpload.addEventListener('change', getImageFiles);
+                        </script>
+                        <!-- 중간삽입 : 사진첨부 - 끝 -->
                     <!-- Button -->
                     <div class="form-group">
                         <label class="col-md-12 control-label" for="singlebutton"></label>

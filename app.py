@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'sample_secret'
 
 def connectsql():
-    conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
+    conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8') # [이보형] db = 'dancingwhale_db'로 수정
     return conn
 
 @app.route('/')
@@ -29,7 +29,7 @@ def post():
         username = None
     conn = connectsql()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
-    query = "SELECT id, name, title, wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
+    query = "SELECT id, user_name, post_title, post_wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
     cursor.execute(query)
     post_list = cursor.fetchall()
     
@@ -45,7 +45,7 @@ def content(id):
         username = session['username']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "UPDATE board SET view = view + 1 WHERE id = %s"
+        query = "UPDATE board SET post_view = view + 1 WHERE id = %s"
         value = id
         cursor.execute(query, value)
         conn.commit()
@@ -54,7 +54,7 @@ def content(id):
 
         conn = connectsql()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        query = "SELECT id, title, content FROM board WHERE id = %s"
+        query = "SELECT id, post_title, post_cont FROM board WHERE id = %s"
         value = id
         cursor.execute(query, value)
         content = cursor.fetchall()
@@ -78,7 +78,7 @@ def edit(id):
 
             conn = connectsql()
             cursor = conn.cursor()
-            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
+            query = "UPDATE board SET post_title = %s, post_cont = %s WHERE id = %s"
             value = (edittitle, editcontent, id)
             cursor.execute(query, value)
             conn.commit()
@@ -91,7 +91,7 @@ def edit(id):
             username = session['username']
             conn = connectsql()
             cursor = conn.cursor()
-            query = "SELECT name FROM board WHERE id = %s"
+            query = "SELECT user_name FROM board WHERE id = %s"
             value = id
             cursor.execute(query, value)
             data = [post[0] for post in cursor.fetchall()]
@@ -101,7 +101,7 @@ def edit(id):
             if username in data:
                 conn = connectsql()
                 cursor = conn.cursor(pymysql.cursors.DictCursor)
-                query = "SELECT id, title, content FROM board WHERE id = %s"
+                query = "SELECT id, post_title, post_cont FROM board WHERE id = %s"
                 value = id
                 cursor.execute(query, value)
                 postdata = cursor.fetchall()
@@ -120,7 +120,7 @@ def delete(id):
         username = session['username']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "SELECT name FROM board WHERE id = %s"
+        query = "SELECT user_name FROM board WHERE id = %s"
         value = id
         cursor.execute(query, value)
         data = [post[0] for post in cursor.fetchall()]
@@ -162,7 +162,7 @@ def write():
 
             conn = connectsql()
             cursor = conn.cursor() 
-            query = "INSERT INTO board (name, pass, title, content) values (%s, %s, %s, %s)"
+            query = "INSERT INTO board (user_name, user_pwd, post_title, post_cont) values (%s, %s, %s, %s)"
             value = (username, password, usertitle, usercontent)
             cursor.execute(query, value)
             conn.commit()
@@ -196,7 +196,7 @@ def login():
         logininfo = request.form['id']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "SELECT * FROM tbl_user WHERE user_name = %s AND user_password = %s"
+        query = "SELECT * FROM tbl_user WHERE user_name = %s AND user_pwd = %s"
         value = (userid, userpw)
         cursor.execute(query, value)
         data = cursor.fetchall()
@@ -234,7 +234,7 @@ def regist():
             conn.rollback() # 이건 안 써도 될 듯
             return render_template('registError.html') 
         else:
-            query = "INSERT INTO tbl_user (user_name, user_password) values (%s, %s)"
+            query = "INSERT INTO tbl_user (user_name, user_pwd) values (%s, %s)"
             value = (userid, userpw)
             cursor.execute(query, value)
             data = cursor.fetchall()
@@ -244,6 +244,37 @@ def regist():
         conn.close()
     else:
         return render_template('regist.html')        
+
+# 수정중 -- 사진 파일 업로드 - 시작
+# 출처 : https://velog.io/@coginner_/flask-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0
+@app.route('/diary', methods=['POST'])
+def save_diary ():
+    title_receive = request.form['title_give']
+    content_receive = request.form['content_give']
+
+    # 파일 저장을 위한 부분
+    file = request.files["file_give"]
+
+    # 파일 확장자
+    extension = file.filename.split('.')[-1]
+
+    today = datetime.now()
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+
+    filename = f'file-{mytime}'
+
+    save_to = f'static/{filename}.{extension}'
+    file.save(save_to)
+
+    doc = {
+        'title': title_receive,
+        'content': content_receive,
+        'file': f'{filename}.{extension}'
+    }
+
+    db.diary.insert_one(doc)
+    return jsonify({'msg': '저장 완료!'})
+# 사진 파일 업로드 - 끝
 
 if __name__ == '__main__':
     app.run(debug=True)
