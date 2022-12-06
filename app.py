@@ -29,7 +29,7 @@ def post():
         username = None
     conn = connectsql()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
-    query = "SELECT id, name, title, wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
+    query = "SELECT id, name, title, content, wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
     cursor.execute(query)
     post_list = cursor.fetchall()
     

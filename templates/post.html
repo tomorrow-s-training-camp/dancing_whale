@@ -1,69 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-		
-		<title>Dancing whalE｜게시판</title>
-	</head>
-	<body>
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-		<!--LOGO-->
-		<a class="navbar-brand" href="/">HOME</a>
-		<!--Links-->
-		<div class="container-fluid full-width">
-		<ul class="nav navbar-nav">
-		<li class="nav-item active">
-			<a class="nav-link" href="/post">Post</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Post2</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Post3</a>
-		</li>
-		</ul>
-		<div>
-		{% if logininfo %}
-		<button class="btn btn-dark btn-right" type="button" onclick="location.href='/logout'">로그아웃</button>
-		{% else %}
-		<button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">로그인</button>
-		{% endif %}
-		<button class="btn btn-dark btn-right" type="button" onclick="location.href='/write'"><strong>게시글쓰기</strong></button>
-		</div>
-	</nav>
-	</div>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 
-	<div class="container">
-	<br><h1><strong><a style="color:#110957;">POST PAGE</a></strong></h1>
-	<table class="table table-hover">
-		<thead>
-		<tr>
-			<th>번호</th>
-			<th>제목</th>
-			<th>작성자</th>
-			<th>날짜</th>
-			<th>조회수</th>
-		</tr>
-		</thead>
+    <!-- MDB 삽입 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/kit_code.js" crossorigin="anonymous">
 
-		<tbody>
-		{% for post in postlist %}
-		<tr>
-			<td>{{post['id']}}</td>
-			<td><a style="color:#110957;" href="/post/content/{{post['id']}}">{{post['title']}}</a></td>
-			<td>{{post['name']}}</td>
-			<td>{{post['wdate']}}</td>
-			<td>{{post['view']}}</td>
-		</tr>
-		{% endfor %}
-		</tbody>
-	</table>
-	</div>
-	</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+    <title>Dancing whalE｜게시판</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <!--LOGO-->
+    <a class="navbar-brand" href="/">HOME</a>
+    <!--Links-->
+    <div class="container-fluid full-width">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/post">Post</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Post2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Post3</a>
+            </li>
+        </ul>
+        <div>
+            {% if logininfo %}
+                <button class="btn btn-dark btn-right" type="button" onclick="location.href='/logout'">로그아웃</button>
+            {% else %}
+                <button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">로그인</button>
+            {% endif %}
+            <button class="btn btn-dark btn-right" type="button" onclick="location.href='/write'"><strong>게시글쓰기</strong>
+            </button>
+        </div>
+</nav>
+</div>
+
+<!-- 뉴스피드(MDB부트스트랩) - 시작 -->
+    <!-- 출처 : News aggregator / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
+
+    <!-- 버튼 색깔 참고용 <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button> -->
+    <!--Main layout-->
+{% for post in postlist %}
+    <div class="container">
+        <!--Section: Content-->
+        <section>
+            <div class="row gx-lg-5">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <!-- News block -->
+                    <div>
+                        <!-- Featured image -->
+                        <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4"
+                             data-mdb-ripple-color="light">
+                            <img src="https://cdn.imweb.me/upload/S201807025b39d1981b0b0/16b98d3e3d30e.jpg"
+                                 class="img-fluid"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+
+                        <!-- Article data -->
+                        <a href="/post/content/{{ post['id'] }}">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                    <i class="fas fa-plane"></i>
+                                    {{ post['name'] }}
+                            </div>
+                        </div>
+                        <!-- Article title and description -->
+                            {{ post['title'] }}
+                            <p>
+                                {{ post['content'] }}
+                            </p>
+                            <p style="text-align: center;">
+                                작성일시 {{ post['wdate'] }}
+                                조회수 {{ post['view'] }}
+                            </p>
+                        </a>
+                        <hr/>
+                        <!-- 설명 : <hr> 태그는 콘텐츠 내용에서 주제가 바뀔 때 사용할 수 있는 수평 가로선을 정의할 때 사용합니다.
+                                   <hr> 요소는 HTML 문서에서 내용을 구분하거나 주제의 변화를 정의합니다. http://www.tcpschool.com/html-tags/hr -->
+                    </div>
+                    <!-- News block -->
+                </div>
+            {% endfor %}
+
+
+<!-- <div class="container">
+    <br>
+    <h1><strong><a style="color:#110957;">POST PAGE</a></strong></h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for post in postlist %}
+            <tr>
+                <td>{{ post['id'] }}</td>
+                <td><a style="color:#110957;" href="/post/content/{{ post['id'] }}">{{ post['title'] }}</a></td>
+                <td>{{ post['name'] }}</td>
+                <td>{{ post['wdate'] }}</td>
+                <td>{{ post['view'] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div> -->
+</body>
 </html>
