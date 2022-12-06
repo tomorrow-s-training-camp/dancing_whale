@@ -54,24 +54,19 @@
     <div class="card-body">
       <!-- Reactions -->
         <div>
-          <a href="" class="text-muted">조회 {{data_['view']}}</a>
+          <a href="" class="text-muted">조회수 {{data_['view']}}</a>
         </div>
       </div>
       <!-- Reactions -->
 
       <!-- 게시글 조회 - 끝 -->
 
-      <!-- 댓글 작성 - 시작 -->
+ {#     <!-- 댓글 작성 - 시작 -->
       <!-- Input -->
       <div class="d-flex mb-3">
         <div class="form-outline w-100">
-          <textarea class="form-control" id="textAreaExample" rows="2" placeholder="댓글을 작성해주세요."></textarea>
-          <div class="form-group">
-                        <label class="col-md-12 control-label" for="singlebutton"></label>
-                        <div class="col-md-12">
-                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="작성하기">
-                        </div>
-          <label class="form-label" for="textAreaExample"></label>
+          <textarea class="form-control" id="textAreaExample" rows="2"></textarea>
+          <label class="form-label" for="textAreaExample">댓글을 작성해주세요.</label>
         </div>
       </div>
       <!-- Input -->
@@ -83,15 +78,15 @@
         <div>
           <div class="bg-light rounded-3 px-3 py-1">
             <a href="" class="text-dark mb-0">
-              <strong>{{data_['cmt_name']}}</strong>
+              <strong>댓글 작성자 이름</strong>
             </a>
             <a href="" class="text-muted d-block">
-              <small>{{data_['cmt_cnt']}}</small>
+              <small>댓글 내용</small>
             </a>
           </div>
         </div>
       </div>
-      <!-- 댓글 조회 - 끝 -->
+      <!-- 댓글 조회 - 끝 -->#}
     </div>
     <div class="card-footer">
 						<a href="/post/edit/{{data_['id']}}" class="card-link">수정하기</a>
