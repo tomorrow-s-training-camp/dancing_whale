@@ -6,9 +6,10 @@ app = Flask(__name__)
 app.secret_key = 'sample_secret'
 
 def connectsql():
-    conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8') # [이보형] db = 'dancingwhale_db'로 수정
+    conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
     return conn
 
+# 로그인/회원가입 - 시작
 @app.route('/')
 # 세션유지를 통한 로그인 유무 확인
 def index():
@@ -20,6 +21,76 @@ def index():
         username = None
         return render_template('index.html', logininfo = username )
 
+    @app.route('/logout')
+    # username 세션 해제
+    def logout():
+        session.pop('username', None)
+        return redirect(url_for('index'))
+
+    @app.route('/login', methods=['GET', 'POST'])
+    # GET -> 로그인 페이지 연결
+    # POST -> 로그인 시 form에 입력된 id, pw를 table에 저장된 id, pw에 비교후 일치하면 로그인, id,pw 세션유지
+    def login():
+        if request.method == 'POST':
+            userid = request.form['id']
+            userpw = request.form['pw']
+
+            logininfo = request.form['id']
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "SELECT * FROM tbl_user WHERE user_name = %s AND user_password = %s"
+            value = (userid, userpw)
+            cursor.execute(query, value)
+            data = cursor.fetchall()
+            cursor.close()
+            conn.close()
+
+            for row in data:
+                data = row[0]
+
+            if data:
+                session['username'] = request.form['id']
+                session['password'] = request.form['pw']
+                return render_template('index.html', logininfo=logininfo)
+            else:
+                return render_template('loginError.html')
+        else:
+            return render_template('login.html')
+
+    @app.route('/regist', methods=['GET', 'POST'])
+    # GET -> 회원가입 페이지 연결
+    # 회원가입 버튼 클릭 시, 입력된 id가 tbl_user의 컬럼에 있을 시 에러팝업, 없을 시 회원가입 성공
+    def regist():
+        if request.method == 'POST':
+            userid = request.form['id']
+            userpw = request.form['pw']
+
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "SELECT * FROM tbl_user WHERE user_name = %s"
+            value = userid
+            cursor.execute(query, value)
+            data = (cursor.fetchall())
+            # import pdb; pdb.set_trace()
+            if data:
+                conn.rollback()  # 데이터 처리 더 빠르게
+                return render_template('registError.html')
+            else:
+                query = "INSERT INTO tbl_user (user_name, user_password) values (%s, %s)"
+                value = (userid, userpw)
+                cursor.execute(query, value)
+                data = cursor.fetchall()
+                conn.commit()
+                return render_template('registSuccess.html')
+            cursor.close()
+            conn.close()
+        else:
+            return render_template('regist.html')
+    # 로그인/회원가입 - 끝
+
+
+
+    # 게시판 - 시작
 @app.route('/post')
 # board테이블의 게시판 제목리스트 역순으로 출력
 def post():
@@ -29,7 +100,7 @@ def post():
         username = None
     conn = connectsql()
     cursor = conn.cursor(pymysql.cursors.DictCursor)
-    query = "SELECT id, user_name, post_title, post_wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
+    query = "SELECT id, name, title, wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
     cursor.execute(query)
     post_list = cursor.fetchall()
     
@@ -45,7 +116,7 @@ def content(id):
         username = session['username']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "UPDATE board SET post_view = view + 1 WHERE id = %s"
+        query = "UPDATE board SET view = view + 1 WHERE id = %s"
         value = id
         cursor.execute(query, value)
         conn.commit()
@@ -54,7 +125,7 @@ def content(id):
 
         conn = connectsql()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        query = "SELECT id, post_title, post_cont FROM board WHERE id = %s"
+        query = "SELECT id, title, name, content, view FROM board WHERE id = %s" # 사용자 아이디는 name
         value = id
         cursor.execute(query, value)
         content = cursor.fetchall()
@@ -78,7 +149,7 @@ def edit(id):
 
             conn = connectsql()
             cursor = conn.cursor()
-            query = "UPDATE board SET post_title = %s, post_cont = %s WHERE id = %s"
+            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
             value = (edittitle, editcontent, id)
             cursor.execute(query, value)
             conn.commit()
@@ -91,7 +162,7 @@ def edit(id):
             username = session['username']
             conn = connectsql()
             cursor = conn.cursor()
-            query = "SELECT user_name FROM board WHERE id = %s"
+            query = "SELECT name FROM board WHERE id = %s"
             value = id
             cursor.execute(query, value)
             data = [post[0] for post in cursor.fetchall()]
@@ -101,7 +172,7 @@ def edit(id):
             if username in data:
                 conn = connectsql()
                 cursor = conn.cursor(pymysql.cursors.DictCursor)
-                query = "SELECT id, post_title, post_cont FROM board WHERE id = %s"
+                query = "SELECT id, title, content FROM board WHERE id = %s"
                 value = id
                 cursor.execute(query, value)
                 postdata = cursor.fetchall()
@@ -120,7 +191,7 @@ def delete(id):
         username = session['username']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "SELECT user_name FROM board WHERE id = %s"
+        query = "SELECT name FROM board WHERE id = %s"
         value = id
         cursor.execute(query, value)
         data = [post[0] for post in cursor.fetchall()]
@@ -162,7 +233,7 @@ def write():
 
             conn = connectsql()
             cursor = conn.cursor() 
-            query = "INSERT INTO board (user_name, user_pwd, post_title, post_cont) values (%s, %s, %s, %s)"
+            query = "INSERT INTO board (name, pass, title, content) values (%s, %s, %s, %s)"
             value = (username, password, usertitle, usercontent)
             cursor.execute(query, value)
             conn.commit()
@@ -170,111 +241,104 @@ def write():
             conn.close()
 
             return redirect(url_for('post'))
-        else:
-            return render_template('errorpage.html')
+
     else:
         if 'username' in session:
             username = session['username']
             return render_template ('write.html', logininfo = username)
         else:
             return render_template ('Error.html')
+    # 게시판 - 끝
 
-@app.route('/logout')
-# username 세션 해제
-def logout():
-    session.pop('username', None)
-    return redirect(url_for('index'))
 
-@app.route('/login', methods=['GET','POST'])
-# GET -> 로그인 페이지 연결
-# POST -> 로그인 시 form에 입력된 id, pw를 table에 저장된 id, pw에 비교후 일치하면 로그인, id,pw 세션유지
-def login():
-    if request.method == 'POST':
-        userid = request.form['id']
-        userpw = request.form['pw']
 
-        logininfo = request.form['id']
+    # 댓글 - 시작
+    @app.route('/post')
+    # comment 테이블의 게시판 제목리스트 역순으로 출력
+    def post():
+        if 'username' in session:
+            username = session['username']
+        else:
+            username = None
         conn = connectsql()
-        cursor = conn.cursor()
-        query = "SELECT * FROM tbl_user WHERE user_name = %s AND user_pwd = %s"
-        value = (userid, userpw)
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        query = "SELECT id, name, content, wdate FROM comment ORDER BY id DESC"  # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
+        value = (cmt_id, cmt_name, cmt_cnt, cmt_wdate)
         cursor.execute(query, value)
-        data = cursor.fetchall()
+        post_list = cursor.fetchall()
+
         cursor.close()
         conn.close()
-        
-        for row in data:
-            data = row[0]
-        
-        if data:
-            session['username'] = request.form['id']
-            session['password'] = request.form['pw']
-            return render_template('index.html', logininfo = logininfo)
-        else:
-            return render_template('loginError.html')
-    else:
-        return render_template ('login.html')
 
-@app.route('/regist', methods=['GET', 'POST'])
-# GET -> 회원가입 페이지 연결
-# 회원가입 버튼 클릭 시, 입력된 id가 tbl_user의 컬럼에 있을 시 에러팝업, 없을 시 회원가입 성공
-def regist():
-    if request.method == 'POST':
-        userid = request.form['id']
-        userpw = request.form['pw']
+        return render_template('comment.html', postlist=post_list, logininfo=username)
 
-        conn = connectsql()
-        cursor = conn.cursor()
-        query = "SELECT * FROM tbl_user WHERE user_name = %s"
-        value = userid
-        cursor.execute(query, value)
-        data = (cursor.fetchall())
-        #import pdb; pdb.set_trace()
-        if data:
-            conn.rollback() # 이건 안 써도 될 듯
-            return render_template('registError.html') 
-        else:
-            query = "INSERT INTO tbl_user (user_name, user_pwd) values (%s, %s)"
-            value = (userid, userpw)
+    '''
+    @app.route('/post/delete/<id>') # 댓글
+    # 유지되고 있는 username 세션과 id 일치시 삭제확인 팝업 연결
+    def delete(id):
+        if 'username' in session:
+            username = session['username']
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "SELECT name FROM board WHERE id = %s"
+            value = id
             cursor.execute(query, value)
-            data = cursor.fetchall()
-            conn.commit()
-            return render_template('registSuccess.html')
+            data = [post[0] for post in cursor.fetchall()]
+            cursor.close()
+            conn.close()
+
+            if username in data:
+                return render_template('delete.html', id=id)
+            else:
+                return render_template('editError.html')
+        else:
+            return render_template('Error.html')
+
+    @app.route('/post/delete/success/<id>') # 댓글
+    # 삭제 확인시 id와 일치하는 컬럼 삭제, 취소시 /post 페이지 연결
+    def deletesuccess(id):
+        conn = connectsql()
+        cursor = conn.cursor()
+        query = "DELETE FROM board WHERE id = %s"
+        value = id
+        cursor.execute(query, value)
+        conn.commit()
         cursor.close()
         conn.close()
-    else:
-        return render_template('regist.html')        
 
-# 수정중 -- 사진 파일 업로드 - 시작
-# 출처 : https://velog.io/@coginner_/flask-%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EA%B8%B0
-@app.route('/diary', methods=['POST'])
-def save_diary ():
-    title_receive = request.form['title_give']
-    content_receive = request.form['content_give']
+        return redirect(url_for('post'))'''
 
-    # 파일 저장을 위한 부분
-    file = request.files["file_give"]
+    @app.route('/write', methods=['GET', 'POST']) # 댓글
+    # GET -> write 페이지 연결
+    # POST -> username, password를 세션으로 불러온 후, form에 작성되어진 title, content를 테이블에 입력
+    def write():
+        if request.method == 'POST':
+            if 'username' in session:
+                username = session['username']
+                password = session['password']
 
-    # 파일 확장자
-    extension = file.filename.split('.')[-1]
+                usertitle = request.form['title']
+                usercontent = request.form['content']
 
-    today = datetime.now()
-    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+                conn = connectsql()
+                cursor = conn.cursor()
+                query = "INSERT INTO board (name, pass, content, wdate) values (%s, %s, %s, %s)"
+                value = (cmt_name, cmt_pass, cmt_cnt, cmt_wdate)
 
-    filename = f'file-{mytime}'
+                cursor.execute(query, value)
+                conn.commit()
+                cursor.close()
+                conn.close()
 
-    save_to = f'static/{filename}.{extension}'
-    file.save(save_to)
+                return redirect(url_for('post'))
 
-    doc = {
-        'title': title_receive,
-        'content': content_receive,
-        'file': f'{filename}.{extension}'
-    }
-
-    db.diary.insert_one(doc)
-    return jsonify({'msg': '저장 완료!'})
-# 사진 파일 업로드 - 끝
+        else:
+            if 'username' in session:
+                username = session['username']
+                return render_template('write.html', logininfo=username)
+            else:
+                return render_template('Error.html')
+    # 댓글 - 끝
 
 if __name__ == '__main__':
     app.run(debug=True)

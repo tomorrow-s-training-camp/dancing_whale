@@ -18,7 +18,9 @@
 			<h2 class="card-title text-center" style="color:#113366;">SIGN UP</h2>
 		</div>
 		<div class="card-body">
-    	<form class="form-signin" method="POST" action="/regist"> 
+        <!-- url 연결을 HTML의 action으로 사용  -->
+        <!-- 출처 : http://www.tcpschool.com/html-tag-attrs/form-action -->
+    	<form class="form-signin" method="POST" action="/regist">
         	<input type="text" name="id" class="form-control" placeholder="username" required autofocus><br>
         	<input type="password" name="pw" class="form-control" placeholder="password" required><br>
 			<button class="btn btn-primary btn-block" type="submit">회원가입</button>

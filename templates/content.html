@@ -31,7 +31,7 @@
             <strong>{{data_['title']}}</strong>
           </a>
           <a href="" class="text-muted d-block" style="margin-top: -6px">
-            <small>작성자 이름</small>
+            <small>{{data_['name']}}</small>
           </a>
         </div>
       </div>
@@ -54,7 +54,7 @@
     <div class="card-body">
       <!-- Reactions -->
         <div>
-          <a href="" class="text-muted">댓글 8 </a>
+          <a href="" class="text-muted">조회 {{data_['view']}}</a>
         </div>
       </div>
       <!-- Reactions -->
@@ -65,8 +65,13 @@
       <!-- Input -->
       <div class="d-flex mb-3">
         <div class="form-outline w-100">
-          <textarea class="form-control" id="textAreaExample" rows="2"></textarea>
-          <label class="form-label" for="textAreaExample">댓글을 작성해주세요.</label>
+          <textarea class="form-control" id="textAreaExample" rows="2" placeholder="댓글을 작성해주세요."></textarea>
+          <div class="form-group">
+                        <label class="col-md-12 control-label" for="singlebutton"></label>
+                        <div class="col-md-12">
+                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="작성하기">
+                        </div>
+          <label class="form-label" for="textAreaExample"></label>
         </div>
       </div>
       <!-- Input -->
@@ -78,10 +83,10 @@
         <div>
           <div class="bg-light rounded-3 px-3 py-1">
             <a href="" class="text-dark mb-0">
-              <strong>댓글 작성자 이름</strong>
+              <strong>{{data_['cmt_name']}}</strong>
             </a>
             <a href="" class="text-muted d-block">
-              <small>댓글 내용</small>
+              <small>{{data_['cmt_cnt']}}</small>
             </a>
           </div>
         </div>
