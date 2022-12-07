@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, session, url_for, request, redirect
 import pymysql
 
@@ -112,67 +111,6 @@ def edit(id):
                 return render_template('editError.html')
         else:
             return render_template ('Error.html')
-
-
-# 테스트용 edit2 2번째- 시작
-@app.route('/mypage')
-# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
-# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
-def edit2():
-    return render_template('mypage.html')
-# 테스트용 edit2 2번째- 끝
-
-'''# 테스트용 edit2 - 시작
-@app.route('/post/edit2/<id>', methods=['GET', 'POST'])
-# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
-# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
-def edit2(id):
-    if request.method == 'POST':
-        if 'username' in session:
-            username = session['username']
-
-            edittitle = request.form['title']
-            editcontent = request.form['content']
-
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
-            value = (edittitle, editcontent, id)
-            cursor.execute(query, value)
-            conn.commit()
-            cursor.close()
-            conn.close()
-
-            return render_template('editSuccess.html')
-    else:
-        if 'username' in session:
-            username = session['username']
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = "SELECT name FROM board WHERE id = %s"
-            value = id
-            cursor.execute(query, value)
-            data = [post[0] for post in cursor.fetchall()]
-            cursor.close()
-            conn.close()
-
-            if username in data:
-                conn = connectsql()
-                cursor = conn.cursor(pymysql.cursors.DictCursor)
-                query = "SELECT id, title, content FROM board WHERE id = %s"
-                value = id
-                cursor.execute(query, value)
-                postdata = cursor.fetchall()
-                cursor.close()
-                conn.close()
-                print(postdata)
-
-                return render_template('edit2.html', data=postdata, logininfo=username)
-            else:
-                return render_template('editError.html')
-        else:
-            return render_template ('Error.html')
-# 테스트용 edit2 - 끝'''
 
 @app.route('/post/delete/<id>')
 # 유지되고 있는 username 세션과 id 일치시 삭제확인 팝업 연결
