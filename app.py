@@ -32,7 +32,7 @@ def post():
     query = "SELECT id, name, title, content, wdate, view FROM board ORDER BY id DESC" # ORDER BY 컬럼명 DESC : 역순출력, ASC : 순차출력
     cursor.execute(query)
     post_list = cursor.fetchall()
-    
+
     cursor.close()
     conn.close()
 
@@ -72,7 +72,7 @@ def edit(id):
     if request.method == 'POST':
         if 'username' in session:
             username = session['username']
- 
+
             edittitle = request.form['title']
             editcontent = request.form['content']
 
@@ -84,7 +84,7 @@ def edit(id):
             conn.commit()
             cursor.close()
             conn.close()
-    
+
             return render_template('editSuccess.html')
     else:
         if 'username' in session:
@@ -97,7 +97,7 @@ def edit(id):
             data = [post[0] for post in cursor.fetchall()]
             cursor.close()
             conn.close()
-           
+
             if username in data:
                 conn = connectsql()
                 cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -112,6 +112,67 @@ def edit(id):
                 return render_template('editError.html')
         else:
             return render_template ('Error.html')
+
+
+# 테스트용 edit2 2번째- 시작
+@app.route('/mypage')
+# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
+# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
+def edit2():
+    return render_template('mypage.html')
+# 테스트용 edit2 2번째- 끝
+
+'''# 테스트용 edit2 - 시작
+@app.route('/post/edit2/<id>', methods=['GET', 'POST'])
+# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
+# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
+def edit2(id):
+    if request.method == 'POST':
+        if 'username' in session:
+            username = session['username']
+
+            edittitle = request.form['title']
+            editcontent = request.form['content']
+
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
+            value = (edittitle, editcontent, id)
+            cursor.execute(query, value)
+            conn.commit()
+            cursor.close()
+            conn.close()
+
+            return render_template('editSuccess.html')
+    else:
+        if 'username' in session:
+            username = session['username']
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "SELECT name FROM board WHERE id = %s"
+            value = id
+            cursor.execute(query, value)
+            data = [post[0] for post in cursor.fetchall()]
+            cursor.close()
+            conn.close()
+
+            if username in data:
+                conn = connectsql()
+                cursor = conn.cursor(pymysql.cursors.DictCursor)
+                query = "SELECT id, title, content FROM board WHERE id = %s"
+                value = id
+                cursor.execute(query, value)
+                postdata = cursor.fetchall()
+                cursor.close()
+                conn.close()
+                print(postdata)
+
+                return render_template('edit2.html', data=postdata, logininfo=username)
+            else:
+                return render_template('editError.html')
+        else:
+            return render_template ('Error.html')
+# 테스트용 edit2 - 끝'''
 
 @app.route('/post/delete/<id>')
 # 유지되고 있는 username 세션과 id 일치시 삭제확인 팝업 연결
@@ -145,9 +206,9 @@ def deletesuccess(id):
     conn.commit()
     cursor.close()
     conn.close()
-    
+
     return redirect(url_for('post'))
-    
+
 @app.route('/write', methods=['GET', 'POST'])
 # GET -> write 페이지 연결
 # POST -> username, password를 세션으로 불러온 후, form에 작성되어진 title, content를 테이블에 입력
@@ -156,12 +217,12 @@ def write():
         if 'username' in session:
             username = session['username']
             password = session['password']
-            
+
             usertitle = request.form['title']
             usercontent = request.form['content']
 
             conn = connectsql()
-            cursor = conn.cursor() 
+            cursor = conn.cursor()
             query = "INSERT INTO board (name, pass, title, content) values (%s, %s, %s, %s)"
             value = (username, password, usertitle, usercontent)
             cursor.execute(query, value)
@@ -190,25 +251,31 @@ def logout():
 # POST -> 로그인 시 form에 입력된 id, pw를 table에 저장된 id, pw에 비교후 일치하면 로그인, id,pw 세션유지
 def login():
     if request.method == 'POST':
-        userid = request.form['id']
-        userpw = request.form['pw']
+        username = request.form['username']
+        password = request.form['password']
+        #username = request.form['user_name']
+        #userpwd = request.form['pwd']
 
-        logininfo = request.form['id']
+        logininfo = request.form['username']
         conn = connectsql()
         cursor = conn.cursor()
-        query = "SELECT * FROM tbl_user WHERE user_name = %s AND user_password = %s"
-        value = (userid, userpw)
+        query = "SELECT * FROM user WHERE user_name = %s AND user_pwd = %s"
+        value = (username, password)
         cursor.execute(query, value)
         data = cursor.fetchall()
         cursor.close()
         conn.close()
-        
+
         for row in data:
             data = row[0]
-        
+
         if data:
-            session['username'] = request.form['id']
-            session['password'] = request.form['pw']
+            session['username'] = request.form['username']
+            session['password'] = request.form['password']
+
+            #session['username'] = request.form['name']
+            #session['userpwd'] = request.form['pwd']
+
             return render_template('index.html', logininfo = logininfo)
         else:
             return render_template('loginError.html')
@@ -220,22 +287,25 @@ def login():
 # 회원가입 버튼 클릭 시, 입력된 id가 tbl_user의 컬럼에 있을 시 에러팝업, 없을 시 회원가입 성공
 def regist():
     if request.method == 'POST':
-        userid = request.form['id']
-        userpw = request.form['pw']
+        username = request.form['username']
+        password = request.form['password']
+        userintro = request.form['intro']
+        #userid = request.form['id']
+        #userpw = request.form['pw']
 
         conn = connectsql()
         cursor = conn.cursor()
-        query = "SELECT * FROM tbl_user WHERE user_name = %s"
-        value = userid
+        query = "SELECT * FROM user WHERE user_name = %s" # 아이디(username) 중복 검사 부분
+        value = username
         cursor.execute(query, value)
         data = (cursor.fetchall())
         #import pdb; pdb.set_trace()
         if data:
             conn.rollback() # 이건 안 써도 될 듯
-            return render_template('registError.html') 
+            return render_template('registError.html')
         else:
-            query = "INSERT INTO tbl_user (user_name, user_password) values (%s, %s)"
-            value = (userid, userpw)
+            query = "INSERT INTO user (user_name, user_pwd, user_intro) values (%s, %s, %s)"
+            value = (username, password, userintro)
             cursor.execute(query, value)
             data = cursor.fetchall()
             conn.commit()
@@ -243,7 +313,8 @@ def regist():
         cursor.close()
         conn.close()
     else:
-        return render_template('regist.html')        
+        return render_template('regist.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,30 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
-	
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-   		<title>Dancing whalE｜회원가입</title>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maxinum-scale=1, user-scalable=no">
 
-	<body>
-		<br><div class="container">
-		<div class="card align-middle" style="width:100%; border-radius:20px;">
-		<div class="card-title" style="margin-top:50px;">
-			<h2 class="card-title text-center" style="color:#113366;">SIGN UP</h2>
-		</div>
-		<div class="card-body">
-    	<form class="form-signin" method="POST" action="/regist"> 
-        	<input type="text" name="id" class="form-control" placeholder="username" required autofocus><br>
-        	<input type="password" name="pw" class="form-control" placeholder="password" required><br>
-			<button class="btn btn-primary btn-block" type="submit">회원가입</button>
-			<button class="btn btn-primary btn-block" type="button" onclick="location.href='/'">메인으로</button>
-    	</form>
-		</div>
-		</div>
-  </body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <title>Dancing whalE｜회원가입</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<script>
+    <!--유효성 검사 기능 호출-->
+       function checkAll() {
+        if (!checkNickname(form.ID.value)) {
+            return false;
+        }
+        if (!checkPassword(form.ID.value, form.pw1.value, form.pw2.value, form.intro.value)) {
+            return false;
+        }
+        if (!checkIntro(form.intro.value)) {
+            return false;
+        }
+         if (!checkaggrement()) {
+            return false;
+        }
+        return true;
+    }
+    //공백확인
+    function checkExistData(value, dataName) {
+        if (value == "") {
+            alert(dataName + " 입력해주세요!");
+            return false;
+        }
+        return true;
+    }
+
+    function checkPassword(ID, pw1, pw2) {
+        //비밀번호가 입력되었는지   확인하기
+        if (!checkExistData(pw1, "비밀번호를"))
+            return false;
+        //비밀번호 확인이 입력되었는지 확인하기
+        if (!checkExistData(pw2, "비밀번호 확인을"))
+            return false;
+
+        var password1RegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/; //비밀번호 유효성 검사
+        if (!password1RegExp.test(pw1)) {
+            alert("비밀번호는 영문 대소문자와 숫자 6자리 이상으로 입력해야합니다!");
+            form.pw1.value = "";
+            form.pw1.focus();
+            return false;
+        }
+        //비밀번호와 비밀번호 확인이 맞지 않다면..
+        if (pw1 != pw2) {
+            alert("두 비밀번호가 맞지 않습니다.");
+            form.pw1.value = "";
+            form.pw2.value = "";
+            form.pw2.focus();
+            return false;
+        }
+        return true; //확인이 완료되었을 때
+    }
+
+    //닉네임 검사
+    function checkNickname(ID){
+        if (!checkExistData(ID, "아이디을"))
+            return false;
+
+        var nameRegExp = /^[A-Za-z0-9_]{2,16}$/;
+        if (!nameRegExp.test(ID)) {
+            alert("아이디가 올바르지 않습니다.");
+            return false;
+        }
+        return true; //확인이 완료되었을 때
+    }
+
+    function checkIntro(intro){
+        if (!checkExistData(intro, "자기소개를"))
+            return false;
+         if(checkIntro == true){
+         }
+             return true;
+    }
+
+    //약관 체크 검사
+     function checkaggrement() {
+         var checkedaggrement = document.getElementById('aggrement').checked;
+         if(checkedaggrement == true){
+             return true;
+         }
+         alert("체크 해주세요!");
+         return false;
+     }
+</script>
+<body>
+<br>
+<div class="container">
+    <div class="card align-middle" style="width:100%; border-radius:20px;">
+        <div class="card-title" style="margin-top:50px;">
+            <h2 class="card-title text-center" style="color:#113366;">회원 가입</h2>
+        </div>
+        <div class="card-body">
+            <form name="form" method="POST" action="/regist" onsubmit="return checkAll()" >
+
+                <input type="text" id="ID" name="username" class="form-control" placeholder="ID" required autofocus><br>
+
+                <input type="password" id="pw1" name="password" class="form-control" placeholder="대소문자&숫자 6자 이상" required><br>
+
+                <input type="password" id="pw2" name="password" class="form-control" placeholder="비밀번호 재입력" required><br>
+
+                <textarea class="form-control" id="intro" name="intro" placeholder="100자이내" value="" maxlength="100">
+                </textarea>
+
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="aggrement">
+                <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="submit" onclick="">회원가입</button>
+                <button class="btn btn-primary btn-block" type="button" onclick="location.href='/'">메인으로</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
 </html>
