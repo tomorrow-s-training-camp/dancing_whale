@@ -9,6 +9,58 @@ def connectsql():
     conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
     return conn
 
+
+
+#예제 - 회원정보 수정 - 시작
+#정보수정 후 다음창에 넘겨주기
+import sqlite3
+import app
+
+
+@app.route('/user_info_editproc', methods=['POST'])
+def user_info_editproc():
+    idx = request.form['idx']
+    userPwd = request.form['userPwd']
+    userEmail = request.form['userEmail']
+
+    if len(idx) == 0:
+        return 'Edit Data Not Found!'
+    else:
+        conn = sqlite3.connect('python.db')
+        cursor = conn.cursor()
+        sql = '''
+            update member
+                set userPwd = ?, userEmail = ?
+                where idx = ?
+        '''
+
+        cursor.execute(sql, (userPwd, userEmail, idx))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return redirect(url_for('main'))
+
+
+app.secret_key = 'sample_secret_key'
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
+@app.route('/user_info_edit/<int:edit_idx>', methods=['GET'])
+def getUser(edit_idx):
+    if session.get('logFlag') != True:
+        return redirect(url_for(login_form))
+    conn = splite3.connect('python.db')
+    cursor = conn.cursor()
+    query = "select userEmail from member where idx = ?"
+    cursor.execute(sql, (edit_idx,))
+    row = cursor.fetchone()
+    edit_email = row[0]
+    return render_template('users/user_info.html', edit_idx=edit_idx, edit_email=edit_email)
+
+#예제 - 회원정보 수정 - 끝
+
 @app.route('/')
 # 세션유지를 통한 로그인 유무 확인
 def index():

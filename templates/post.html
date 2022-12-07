@@ -47,6 +47,9 @@
                 <button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">로그인</button>
             {% endif %}
 
+        {% for myinfo in myinfolist %}
+            <strong>{{myinfo['user_name']}}</strong>
+        {% endfor %}
             <button class="btn btn-dark btn-right" type="button" onclick="location.href='/write'">
                 <strong>게시글쓰기</strong>
             </button>
@@ -76,7 +79,7 @@
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
             </div>
-            
+
             <!-- Article data -->
             <a href="/post/content/{{ post['id'] }}">
                 <div class="row mb-3">
