@@ -1,8 +1,9 @@
 from flask import Flask, render_template, session, url_for, request, redirect
 import pymysql
+import hashlib
 
 app = Flask(__name__)
-app.secret_key = 'sample_secret'
+app.secret_key = '1234'
 
 def connectsql():
     conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
@@ -198,6 +199,7 @@ def login():
         conn = connectsql()
         cursor = conn.cursor()
         query = "SELECT * FROM user WHERE user_name = %s AND user_pwd = %s"
+        password = hashlib.sha256(password.encode('utf-8')).hexdigest()
         value = (username, password)
         cursor.execute(query, value)
         data = cursor.fetchall()
@@ -243,6 +245,7 @@ def regist():
             return render_template('registError.html')
         else:
             query = "INSERT INTO user (user_name, user_pwd, user_intro) values (%s, %s, %s)"
+            password = hashlib.sha256(password.encode('utf-8')).hexdigest()
             value = (username, password, userintro)
             cursor.execute(query, value)
             data = cursor.fetchall()
