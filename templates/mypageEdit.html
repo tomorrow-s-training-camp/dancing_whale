@@ -5,51 +5,69 @@
     <meta charset="UTF-8">
     <title>Dancing whalE｜마이페이지 수정</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li>접속자 : <strong>{{logininfo}}</strong> 님</li>
-                </ul>
-            </nav>
-            <h3 class="text-muted">마이페이지 정보수정</h3>
-        </div>
-        <section>
-            {% for data in mydataedit %}
-            <form class="form-horizontal" method="post" action="/mypage/edit/{{data['myid']}}">
-                <fieldset>
-                    <!-- Form Name -->
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-12" for="txtTitle">아이디</label>
-                        <div class="col-md-12">
-                            <input id="txtTitle" name="user_name" type="text" placeholder="아이디를 입력하세요." class="form-control input-md",
-                                   autofocus required value="{{data['user_name']}}"><!--required : 공백입력시 경고-->
-                        </div>
-                    </div>
-                    <!-- Textarea -->
-                    <div class="form-group">
-                        <label class="col-md-12" for="txtPost">자기소개</label>
-                        <div class="col-md-12">
-                            <textarea class="form-control" id="txtPost" name="user_intro" placeholder="내용을 입력하세요." style="height:260px;" required>
-                                {{data['user_intro']}}</textarea>
-                        </div>
-                    </div>
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-12 control-label" for="singlebutton"></label>
-                        <div class="col-md-12">
-                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="수정하기">
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-            {% endfor %}
-        </section>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li>접속자 : <strong>{{ logininfo }}</strong> 님</li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">마이페이지 정보수정</h3>
     </div>
+    <section>
+        <form class="form-horizontal" method="post" action="/mypage/edit/{{ mydataedit[0]['user_name'] }}">
+            <p>{{ mydataedit }}</p>
+
+            {% for data in mydataedit %}
+                <fieldset>
+                <!-- Form Name -->
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-12" for="txtTitle">아이디</label>
+                    <div class="col-md-12">
+                        <input id="txtTitle" name="user_name" type="text" placeholder="아이디를 입력하세요."
+                               class="form-control input-md" ,
+                               autofocus required value="{{ data['user_name'] }}"><!--required : 공백입력시 경고-->
+                    </div>
+                </div>
+                <!-- Textarea -->
+                <div class="form-group">
+                <label class="col-md-12" for="txtPost">자기소개</label>
+                <div class="col-md-12">
+                <textarea class="form-control" id="txtPost" name="user_intro" placeholder="내용을 입력하세요."
+                          style="height:260px;" required>
+                                {{ data['user_intro'] }}</textarea>
+            {% endfor %}
+            </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-12 control-label" for="singlebutton"></label>
+                <div class="col-md-12">
+                    {#                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="수정하기">#}
+                    {#                            <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="수정하기">#}
+                    {#                    <button class="btn btn-primary" type="button" onclick="location.href='/mypage/{{ logininfo }}'">수정하기#}
+                    {#                        테스트1#}
+                    {#                    </button>#}
+
+                    <div class="col-md-12">
+                        <input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit"
+                               onclick="location.href='/mypage/{{ mydataedit[0][0] }}" value="수정하기">
+                    </div>
+
+                </div>
+            </div>
+            </fieldset>
+        </form>
+
+    </section>
+</div>
+<script>
+    <!-- document.location.href = "/mypage/{{ mydataedit[0]['user_name'] }}"; -->
+</script>
 </body>
 </html>

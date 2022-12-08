@@ -19,8 +19,8 @@
             <h3 class="text-muted">게시판 글수정</h3>
         </div>
         <section>
-            {% for data_ in data %}
-            <form class="form-horizontal" method="post" action="/post/edit/{{data_['id']}}">
+            <form class="form-horizontal" method="post" action="/post/edit/{{data[0]['id']}}">
+                {% for data_ in data %}
                 <fieldset>
                     <!-- Form Name -->
                     <legend>Edit Your Post</legend>

@@ -45,13 +45,15 @@
                   <a href="/post" class="card-link">목록으로</a> -->
                         </div>
                     {% endfor %}
-    {% for data in mydataedit %}
-        <a href="/mypage/edit/{{data['myid']}}" class="card-link">수정하기</a>
-    {% endfor %}
+{#    {% for data in mydataedit %}#}
+{#        <a href="/mypage/edit/{{data['myid']}}" class="card-link">수정하기</a>#}
+{#    {% endfor %}#}
+
+<a href="/mypage/edit/{{ username }}" class="card-link">수정하기</a>
     <!-- Interactions -->
     </div>
 </section>
 <!--Section: Newsfeed-->
 
 </body>
-</html>Z
+</html>

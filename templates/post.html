@@ -46,21 +46,9 @@
                     <li>접속자 : <strong>{{ logininfo }}</strong> 님</li>
                 </ul>
             </nav>
-
-{#            마이데이터 '{{ mydata }}'#}
-{#            유저네임 '{{ username }}'#}
-{#var someJavaScriptVar = '{{ geocode[1] }}';#}
-
-                <a href="/mypage/{{ logininfo }}" class="card-link">마이페이지</a>
-
-            {#            {% mydata %}#}
-            {#                <button class="btn btn-dark btn-right" type="button"#}
-            {#                        onclick="location.href='/mypage/{{ data['myid'] }}'">마이페이지#}
-            {#                </button>#}
-            {#            {% endfor %}#}
-
             {% if logininfo %}
                 <button class="btn btn-dark btn-right" type="button" onclick="location.href='/logout'">로그아웃</button>
+                <button class="btn btn-dark btn-right" type="button" onclick="location.href='/mypage/{{ logininfo }}'">마이페이지</button>
             {% else %}
                 <button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">로그인</button>
             {% endif %}
