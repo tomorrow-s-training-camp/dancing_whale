@@ -41,15 +41,30 @@
             </li>
         </ul>
         <div>
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li>접속자 : <strong>{{ logininfo }}</strong> 님</li>
+                </ul>
+            </nav>
+
+{#            마이데이터 '{{ mydata }}'#}
+{#            유저네임 '{{ username }}'#}
+{#var someJavaScriptVar = '{{ geocode[1] }}';#}
+
+                <a href="/mypage/{{ logininfo }}" class="card-link">마이페이지</a>
+
+            {#            {% mydata %}#}
+            {#                <button class="btn btn-dark btn-right" type="button"#}
+            {#                        onclick="location.href='/mypage/{{ data['myid'] }}'">마이페이지#}
+            {#                </button>#}
+            {#            {% endfor %}#}
+
             {% if logininfo %}
                 <button class="btn btn-dark btn-right" type="button" onclick="location.href='/logout'">로그아웃</button>
             {% else %}
                 <button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">로그인</button>
             {% endif %}
 
-        {% for myinfo in myinfolist %}
-            <strong>{{myinfo['user_name']}}</strong>
-        {% endfor %}
             <button class="btn btn-dark btn-right" type="button" onclick="location.href='/write'">
                 <strong>게시글쓰기</strong>
             </button>
@@ -106,33 +121,5 @@
     </div>
 {% endfor %}
 
-
-<!-- <div class="container">
-    <br>
-    <h1><strong><a style="color:#110957;">POST PAGE</a></strong></h1>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>번호</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>날짜</th>
-            <th>조회수</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {% for post in postlist %}
-            <tr>
-                <td>{{ post['id'] }}</td>
-                <td><a style="color:#110957;" href="/post/content/{{ post['id'] }}">{{ post['title'] }}</a></td>
-                <td>{{ post['name'] }}</td>
-                <td>{{ post['wdate'] }}</td>
-                <td>{{ post['view'] }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div> -->
 </body>
 </html>
