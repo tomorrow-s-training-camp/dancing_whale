@@ -9,6 +9,57 @@ def connectsql():
     conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
     return conn
 
+
+#예제 - 회원정보 수정 - 시작
+#정보수정 후 다음창에 넘겨주기
+import sqlite3
+import app
+
+
+@app.route('/user_info_editproc', methods=['POST'])
+def user_info_editproc():
+    idx = request.form['idx']
+    userPwd = request.form['userPwd']
+    userEmail = request.form['userEmail']
+
+    if len(idx) == 0:
+        return 'Edit Data Not Found!'
+    else:
+        conn = sqlite3.connect('python.db')
+        cursor = conn.cursor()
+        sql = '''
+            update member
+                set userPwd = ?, userEmail = ?
+                where idx = ?
+        '''
+
+        cursor.execute(sql, (userPwd, userEmail, idx))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return redirect(url_for('main'))
+
+
+app.secret_key = 'sample_secret_key'
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
+@app.route('/user_info_edit/<int:edit_idx>', methods=['GET'])
+def getUser(edit_idx):
+    if session.get('logFlag') != True:
+        return redirect(url_for(login_form))
+    conn = splite3.connect('python.db')
+    cursor = conn.cursor()
+    query = "select userEmail from member where idx = ?"
+    cursor.execute(sql, (edit_idx,))
+    row = cursor.fetchone()
+    edit_email = row[0]
+    return render_template('users/user_info.html', edit_idx=edit_idx, edit_email=edit_email)
+
+#예제 - 회원정보 수정 - 끝
+
 @app.route('/')
 # 세션유지를 통한 로그인 유무 확인
 def index():
@@ -69,6 +120,83 @@ def content(id):
 # GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
 # POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
 def edit(id):
+    if request.method == 'POST':
+        if 'username' in session:
+            username = session['username']
+
+            edittitle = request.form['title']
+            editcontent = request.form['content']
+
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
+            value = (edittitle, editcontent, id)
+            cursor.execute(query, value)
+            conn.commit()
+            cursor.close()
+            conn.close()
+
+            return render_template('editSuccess.html')
+    else:
+        if 'username' in session:
+            username = session['username']
+            conn = connectsql()
+            cursor = conn.cursor()
+            query = "SELECT name FROM board WHERE id = %s"
+            value = id
+            cursor.execute(query, value)
+            data = [post[0] for post in cursor.fetchall()]
+            cursor.close()
+            conn.close()
+
+            if username in data:
+                conn = connectsql()
+                cursor = conn.cursor(pymysql.cursors.DictCursor)
+                query = "SELECT id, title, content FROM board WHERE id = %s"
+                value = id
+                cursor.execute(query, value)
+                postdata = cursor.fetchall()
+                cursor.close()
+                conn.close()
+                return render_template('edit.html', data=postdata, logininfo=username)
+            else:
+                return render_template('editError.html')
+        else:
+            return render_template ('Error.html')
+
+# 마이페이지
+@app.route('/mypage/content/<id>')
+# 조회수 증가, post페이지의 게시글 클릭시 id와 content 비교 후 게시글 내용 출력
+def mypagecontent(id):
+    if 'username' in session:
+        username = session['username']
+
+        conn = connectsql()
+        cursor = conn.cursor()
+        query = "UPDATE board SET view = view + 1 WHERE id = %s"
+        value = id
+        cursor.execute(query, value)
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        conn = connectsql()
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        query = "SELECT id, name, title, content, view FROM board WHERE id = %s"
+        value = id
+        cursor.execute(query, value)
+        myinfo_list = cursor.fetchall()
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return render_template('mypage.html', myinfolist = myinfo_list, username = username)
+    else:
+        return render_template ('Error.html')
+
+@app.route('/mypage/edit/<id>', methods=['GET', 'POST'])
+# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
+# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
+def mypageedit(id):
     if request.method == 'POST':
         if 'username' in session:
             username = session['username']
@@ -256,71 +384,6 @@ def regist():
     else:
         return render_template('regist.html')
 
-# 마이페이지
-@app.route('/mypage/<myid>')
-# post페이지의 게시글 클릭시 id와 content 비교 후 게시글 내용 출력
-def mycontent(myid):
-    if 'username' in session:
-        username = session['username']
-
-        conn = connectsql()
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        # query = "SELECT user_name, user_intro FROM user WHERE user_id"
-        query = f"SELECT user_name, user_intro FROM user WHERE user_name = '{myid}'"
-        cursor.execute(query)
-        mycontent = cursor.fetchall()
-        conn.commit()
-        cursor.close()
-        conn.close()
-        return render_template('mypage.html', mydata = mycontent, username = username)
-    else:
-        return render_template ('Error.html')
-
-@app.route('/mypage/edit/<myid>', methods=['GET', 'POST'])
-# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
-# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
-def mycontentedit(myid):
-    if request.method == 'POST':
-        if 'username' in session:
-            username = session['username']
-
-            myusername = request.form['user_name']
-            myuserintro = request.form['user_intro']
-
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = f"UPDATE user SET user_name = %s, user_intro = %s WHERE user_name = '{myid}'"
-            #value = (myusername, myuserintro)
-            cursor.execute(query)
-            conn.commit()
-            cursor.close()
-            conn.close()
-
-            return render_template('editSuccess.html')
-    else:
-        if 'username' in session:
-            username = session['username']
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = f"SELECT user_name, user_intro FROM user WHERE user_name = '{myid}'" # where user_id로 잘못써서 mysql에서 데이터 안나옴
-            cursor.execute(query)
-            data = [myinfo[0] for myinfo in cursor.fetchall()]
-            cursor.close()
-            conn.close()
-
-            if username in data:
-                conn = connectsql()
-                cursor = conn.cursor(pymysql.cursors.DictCursor)
-                query = f"SELECT user_name, user_intro FROM user WHERE user_name = '{myid}'" # where user_id로 잘못써서 mysql에서 데이터 안나옴
-                cursor.execute(query)
-                mycontentedit = cursor.fetchall()
-                cursor.close()
-                conn.close()
-                return render_template('mypageEdit.html', mydataedit=mycontentedit, logininfo=username)
-            else:
-                return render_template('editError.html') # 본인게시글이 아닙니다!
-        else:
-            return render_template ('Error.html') # 로그인하세요!
 
 if __name__ == '__main__':
     app.run(debug=True)
