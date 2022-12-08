@@ -47,8 +47,8 @@
 						<a href="/post" class="card-link">목록으로</a> -->
                         </div>
                     {% endfor %}
-    {% for mydatainfo in mydataedit %}
-        <a href="/mypage/edit/{{mydatainfo['myid']}}" class="card-link">수정하기</a>
+    {% for data in mydataedit %}
+        <a href="/mypage/edit/{{data['myid']}}" class="card-link">수정하기</a>
     {% endfor %}
     <!-- Interactions -->
     </div>
