@@ -2,14 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
-    <title>Dancing whalE｜게시글 수정</title>
+    <title>Dancing whalE｜마이페이지 수정</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</head>
+</head> 
 <body>
     <div class="container">
         <div class="header">
@@ -18,84 +18,27 @@
                     <li>접속자 : <strong>{{logininfo}}</strong> 님</li>
                 </ul>
             </nav>
-            <h3 class="text-muted">게시판 글수정</h3>
+            <h3 class="text-muted">마이페이지 정보수정</h3>
         </div>
         <section>
             {% for data_ in data %}
             <form class="form-horizontal" method="post" action="/post/edit/{{data_['id']}}">
                 <fieldset>
                     <!-- Form Name -->
-                    <legend>Edit Your Post</legend>
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-12" for="txtTitle">Title</label>
+                        <label class="col-md-12" for="txtTitle">아이디</label>
                         <div class="col-md-12">
                             <input id="txtTitle" name="title" type="text" placeholder="제목을 입력하세요." class="form-control input-md", autofocus required value="{{data_['title']}}"><!--required : 공백입력시 경고-->
                         </div>
                     </div>
                     <!-- Textarea -->
                     <div class="form-group">
-                        <label class="col-md-12" for="txtPost">Post</label>
+                        <label class="col-md-12" for="txtPost">자기소개</label>
                         <div class="col-md-12">
                             <textarea class="form-control" id="txtPost" name="content" placeholder="내용을 입력하세요." style="height:260px;" required>{{data_['content']}}</textarea>
                         </div>
                     </div>
-                     <!-- 중간삽입 : 사진첨부 - 시작 -->
-                        <!-- 출처 : https://iamiet.tistory.com/m/68 -->
-                        <input type="file" class="real-upload" accept="image/*" required multiple>
-                        <div class="upload"></div>
-                        <ul class="image-preview"></ul>
-
-                        <script>
-                            function getImageFiles(e) {
-                                const uploadFiles = [];
-                                const files = e.currentTarget.files;
-                                const imagePreview = document.querySelector('.image-preview');
-                                const docFrag = new DocumentFragment();
-
-                                if ([...files].length >= 7) {
-                                    alert('이미지는 최대 6개 까지 업로드가 가능합니다.');
-                                    return;
-                                }
-
-                                // 파일 타입 검사
-                                [...files].forEach(file => {
-                                    if (!file.type.match("image/.*")) {
-                                        alert('이미지 파일만 업로드가 가능합니다.');
-                                        return
-                                    }
-
-                                    // 파일 개수 검사
-                                    if ([...files].length < 7) {
-                                        uploadFiles.push(file);
-                                        const reader = new FileReader();
-                                        reader.onload = (e) => {
-                                            const preview = createElement(e, file);
-                                            imagePreview.appendChild(preview);
-                                        };
-                                        reader.readAsDataURL(file);
-                                    }
-                                });
-                            }
-
-                            function createElement(e, file) {
-                                const li = document.createElement('li');
-                                const img = document.createElement('img');
-                                img.setAttribute('src', e.target.result);
-                                img.setAttribute('data-file', file.name);
-                                li.appendChild(img);
-
-                                return li;
-                            }
-
-                            const realUpload = document.querySelector('.real-upload');
-                            const upload = document.querySelector('.upload');
-
-                            upload.addEventListener('click', () => realUpload.click());
-
-                            realUpload.addEventListener('change', getImageFiles);
-                        </script>
-                        <!-- 중간삽입 : 사진첨부 - 끝 -->
                     <!-- Button -->
                     <div class="form-group">
                         <label class="col-md-12 control-label" for="singlebutton"></label>

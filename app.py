@@ -38,30 +38,23 @@ def post():
 
     return render_template('post.html', postlist = post_list, logininfo=username)
 
-@app.route('/post/content/<id>')
-# 조회수 증가, post페이지의 게시글 클릭시 id와 content 비교 후 게시글 내용 출력
-def content(id):
+# 자기소개
+@app.route('/mypage/<myid>')
+# post페이지의 게시글 클릭시 id와 content 비교 후 게시글 내용 출력
+def mycontent(myid):
     if 'username' in session:
         username = session['username']
-        conn = connectsql()
-        cursor = conn.cursor()
-        query = "UPDATE board SET view = view + 1 WHERE id = %s"
-        value = id
-        cursor.execute(query, value)
-        conn.commit()
-        cursor.close()
-        conn.close()
 
         conn = connectsql()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        query = "SELECT id, name, title, content, view FROM board WHERE id = %s"
-        value = id
-        cursor.execute(query, value)
-        content = cursor.fetchall()
+        # query = "SELECT user_name, user_intro FROM user WHERE user_id"
+        query = f"SELECT user_name, user_intro FROM user WHERE user_name = '{myid}'"
+        cursor.execute(query)
+        mycontent = cursor.fetchall()
         conn.commit()
         cursor.close()
         conn.close()
-        return render_template('content.html', data = content, username = username)
+        return render_template('mypage.html', mydata = mycontent, username = username)
     else:
         return render_template ('Error.html')
 
@@ -107,84 +100,7 @@ def edit(id):
                 postdata = cursor.fetchall()
                 cursor.close()
                 conn.close()
-                return render_template('edit.html', data=postdata, logininfo=username)
-            else:
-                return render_template('editError.html')
-        else:
-            return render_template ('Error.html')
-
-# 마이페이지
-@app.route('/mypage/content/<id>')
-# 조회수 증가, post페이지의 게시글 클릭시 id와 content 비교 후 게시글 내용 출력
-def mypagecontent(id):
-    if 'username' in session:
-        username = session['username']
-
-        conn = connectsql()
-        cursor = conn.cursor()
-        query = "UPDATE board SET view = view + 1 WHERE id = %s"
-        value = id
-        cursor.execute(query, value)
-        conn.commit()
-        cursor.close()
-        conn.close()
-
-        conn = connectsql()
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        query = "SELECT id, name, title, content, view FROM board WHERE id = %s"
-        value = id
-        cursor.execute(query, value)
-        myinfo_list = cursor.fetchall()
-        conn.commit()
-        cursor.close()
-        conn.close()
-        return render_template('mypage.html', myinfolist = myinfo_list, username = username)
-    else:
-        return render_template ('Error.html')
-
-@app.route('/mypage/edit/<id>', methods=['GET', 'POST'])
-# GET -> 유지되고있는 username 세션과 현재 접속되어진 id와 일치시 edit페이지 연결
-# POST -> 접속되어진 id와 일치하는 title, content를 찾아 UPDATE
-def mypageedit(id):
-    if request.method == 'POST':
-        if 'username' in session:
-            username = session['username']
-
-            edittitle = request.form['title']
-            editcontent = request.form['content']
-
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = "UPDATE board SET title = %s, content = %s WHERE id = %s"
-            value = (edittitle, editcontent, id)
-            cursor.execute(query, value)
-            conn.commit()
-            cursor.close()
-            conn.close()
-
-            return render_template('editSuccess.html')
-    else:
-        if 'username' in session:
-            username = session['username']
-            conn = connectsql()
-            cursor = conn.cursor()
-            query = "SELECT name FROM board WHERE id = %s"
-            value = id
-            cursor.execute(query, value)
-            data = [post[0] for post in cursor.fetchall()]
-            cursor.close()
-            conn.close()
-
-            if username in data:
-                conn = connectsql()
-                cursor = conn.cursor(pymysql.cursors.DictCursor)
-                query = "SELECT id, title, content FROM board WHERE id = %s"
-                value = id
-                cursor.execute(query, value)
-                postdata = cursor.fetchall()
-                cursor.close()
-                conn.close()
-                return render_template('edit.html', data=postdata, logininfo=username)
+                return render_template('mypageEdit.html', data=postdata, logininfo=username)
             else:
                 return render_template('editError.html')
         else:
