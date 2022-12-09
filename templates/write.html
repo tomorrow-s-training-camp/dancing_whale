@@ -16,7 +16,7 @@
                     <li>접속자 : <strong>{{logininfo}}</strong> 님</li>
                 </ul>
             </nav>
-            <h3 class="text-muted">게시판 글작성</h3>
+            <h3 class="text-muted">Dancing whalE｜게시글 작성</h3>
         </div>
         <section>
             <form class="form-horizontal" method="post" action="/write">
@@ -47,7 +47,7 @@
                             function getImageFiles(e) {
                                 const uploadFiles = [];
                                 const files = e.currentTarget.files;
-                                const imagePreview = document.querySelector('.image-preview');
+                                const imagePreview = document.querySelector('.uploads-preview');
                                 const docFrag = new DocumentFragment();
 
                                 if ([...files].length >= 7) {
@@ -57,7 +57,7 @@
 
                                 // 파일 타입 검사
                                 [...files].forEach(file => {
-                                    if (!file.type.match("image/.*")) {
+                                    if (!file.type.match("uploads/.*")) {
                                         alert('이미지 파일만 업로드가 가능합니다.');
                                         return
                                     }

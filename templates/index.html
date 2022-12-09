@@ -22,161 +22,66 @@
     <title>Dancing whalE</title>
 </head>
 <body>
-<div class="row h-100">
-    <div class="col-sm-12 my-auto white-text text-center">
-        <div class="container">
-            <h6>
-                <a>Dancing whalE</a>
-                {% if logininfo %}
-                    <a>{{ logininfo }}님</a>
-                {% endif %}
-                {% if logininfo %}
-                    <a href="/post">게시판가기</a>
-                    <a href="/logout">로그아웃</a>
-                {% else %}
-                    <a href="/login">로그인</a>
-                    <a href="/regist">회원가입</a>
-                {% endif %}
-            </h6>
-        </div>
-    </div>
-
-    <!-- 뉴스피드(MDB부트스트랩) - 시작 -->
-    <!-- 출처 : News aggregator / https://mdbootstrap.com/docs/standard/extended/news-feed/ -->
-
-    <!-- 버튼 색깔 참고용 <button type="button" class="btn btn-primary" style="background-color: #6C6BD1">Read more</button> -->
-    <!--Main layout-->
-    <div class="container">
-        <!--Section: Content-->
-        <section>
-            <div class="row gx-lg-5">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                    <!-- News block -->
-                    <div>
-                        <!-- Featured image -->
-                        <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4"
-                             data-mdb-ripple-color="light">
-                            <img src="https://cdn.imweb.me/upload/S201807025b39d1981b0b0/16b98d3e3d30e.jpg"
-                                 class="img-fluid"/>
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-
-                        <!-- Article data -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <a href="" class="text-info">
-                                    <i class="fas fa-plane"></i>
-                                    작성자명
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Article title and description -->
-                        <a href="" class="text-dark">
-                            <h5>작성글 제목</h5>
-                            <p>
-                                작성글 내용
-                            </p>
-                            <p style="text-align: center;">
-                                조회수 00
-                            </p>
-
-                        </a>
-
-                        <hr/>
-                        <!-- 설명 : <hr> 태그는 콘텐츠 내용에서 주제가 바뀔 때 사용할 수 있는 수평 가로선을 정의할 때 사용합니다.
-                                   <hr> 요소는 HTML 문서에서 내용을 구분하거나 주제의 변화를 정의합니다. http://www.tcpschool.com/html-tags/hr -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <!--LOGO-->
+    <a class="navbar-brand" href="/">Dancing whalE</a>
+    <!--Links-->
+    <div class="container-fluid full-width">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href=""></a>
+            </li>
+        </ul>
+        <div>
+            <div class="row h-100">
+                <div class="col-sm-12 my-auto white-text text-center">
+                    <div class="container">
+                        <h6>
+                        <button class="btn btn-dark btn-right" type="button" onclick="location.href='/post'">
+                                    게시판
+                                </button>
+                            {% if logininfo %}
+                                <button class="btn btn-dark btn-right" type="button" onclick="location.href='/logout'">
+                                    로그아웃
+                                </button>
+                                <button class="btn btn-dark btn-right" type="button"
+                                        onclick="location.href='/mypage/{{ logininfo }}'">마이페이지
+                                </button>
+                            {% else %}
+                                <button class="btn btn-dark btn-right" type="button" onclick="location.href='/login'">
+                                    로그인
+                                </button>
+                            {% endif %}
+                        </h6>
                     </div>
-                    <!-- News block -->
                 </div>
+</nav>
+<style>
+    .home {
+        width: 500px;
+        height: 450px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        margin-top: 200px;
+    }
+</style>
+<div class="home">
+    <center><h1><strong>춤추는 고래</strong></h1></center>
+    <br>
+    <center>
+        <hr width="100%" color="black"/>
+        <center><h5><strong>나에게 쓰는 칭찬 편지 전송</strong></h5></center>
+        <hr width="100%" color="black"/>
 
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <!-- News block -->
-                    <div>
-                        <!-- Featured image -->
-                        <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4"
-                             data-mdb-ripple-color="light">
-                            <img src="https://i.pinimg.com/originals/ef/9a/77/ef9a77001c89c32bce4627e5c6307fc2.jpg"
-                                 class="img-fluid"
-                                 alt="Brooklyn Bridge"/>
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-
-                        <!-- Article data -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <a href="" class="text-danger">
-                                    <i class="fas fa-chart-pie"></i>
-                                    작성자명
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Article title and description -->
-                        <a href="" class="text-dark">
-                            <h5>작성글 제목</h5>
-
-                            <p>
-                                작성글 내용
-                            </p>
-
-                            <p style="text-align: center;">
-                                조회수 00
-                            </p>
-                        </a>
-
-                        <hr/>
-                    </div>
-                    <!-- News block -->
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <!-- News block -->
-                    <div>
-                        <!-- Featured image -->
-                        <div class="bg-image hover-overlay shadow-1-strong rounded-5 ripple mb-4"
-                             data-mdb-ripple-color="light">
-                            <img src="https://ifh.cc/g/g1k5RH.jpg" class="img-fluid"
-                                 alt="Golden Gate National Recreation Area"/>
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                        </div>
-
-                        <!-- Article data -->
-                        <div class="row mb-3">
-                            <div class="col-6">
-                                <a href="" class="text-warning">
-                                    <i class="fas fa-code"></i>
-                                    작성자명
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Article title and description -->
-                        <a href="" class="text-dark">
-                            <h5>작성글 제목</h5>
-
-                            <p>
-                                작성글 내용
-                            </p>
-
-                            <p style="text-align: center;">
-                                조회수 00
-                            </p>
-                        </a>
-
-                        <hr/>
-                    </div>
-                    <!-- News block -->
-                </div>
-            </div>
-        </section>
-        <!-- Section: Content -->
-        <!-- 뉴스피드(MDB부트스트랩) - 끝 -->
+        <br><br>
+        <center>
+            <form action="/upload" method="POST"
+                  enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <input type="submit"/>
+            </form>
+</div>
+</center>
 </body>
 </html>

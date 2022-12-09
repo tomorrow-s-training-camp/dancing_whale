@@ -19,7 +19,7 @@ header,
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+  background: #78909c !important;
 }
 
 @media (max-width: 991px) {

@@ -352,3 +352,1035 @@ INFO:werkzeug:127.0.0.1 - - [08/Dec/2022 23:50:01] "GET /mypage/Bolee810 HTTP/1.
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:19:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:19:50] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:19:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:23:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:23:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:23:21] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:23:31] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:23:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:02] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:02] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:22] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:22] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:24] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:26] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:31] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:31] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:26:33] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:20] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:22] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:27:47] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:42] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:45] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:46] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:56] "POST /fileUpload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:59] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:30:59] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:31:40] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:31:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:31:41] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:31:45] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:32:55] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:32:58] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:32:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:32:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:33:00] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:33:04] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:33:04] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:33:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:09] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:09] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:10] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:14] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:15] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:20] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:20] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:25] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:25] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:34:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:35:09] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:35:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:35:09] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:36:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:36:49] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:36:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:06] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:06] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:37:33] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:10] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:13] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:13] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:15] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:19] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:19] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:19] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:38:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:39:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:39:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:39:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:40:10] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:40:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:40:11] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:03] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:03] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:13] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:13] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:34] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:41:34] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:03] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:08] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:09] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:42:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:43:12] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:43:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:43:12] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:43:15] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:27] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:27] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:38] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:38] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:41] "GET /post/content/35 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:46] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:49] "GET /post/content/35 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:50] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:54] "GET /post/content/35 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:44:56] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:45:59] "GET /post/content/35 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:46:01] "GET /post/edit/35 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:11] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:14] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:16] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:49:40] "GET /mypage/edit/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:52:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:52:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:52:22] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:52:29] "POST /fileUpload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /fileUpload [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'upload_file' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:54:06] "[35m[1mGET /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:54:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:54:12] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:54:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:54:17] "POST /fileUpload HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:20] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:28] "POST /fileUpload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:30] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\werkzeug\datastructures.py", line 3002, in save
+    dst = open(dst, "wb")
+PermissionError: [Errno 13] Permission denied: './static/uploads/'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:32] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:43] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:45] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:49] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:51] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:56] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:56:57] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:57:28] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:57:35] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:58:25] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:58:27] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 08:59:14] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:06] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:07] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:08] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:09] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:09] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:12] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:16] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:16] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:18] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:21] "GET /login HTTP/1.1" 200 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:00:22] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:46] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:47] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:51] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:54] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:01:55] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:02:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:02:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:02:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:03:00] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:03:01] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 86, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:03:04] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 81, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:04:54] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 81, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:04:56] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 81, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:04:58] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:05:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:05:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:05:38] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /post [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 81, in post
+    username = session['usernameㄹ']
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'usernameㄹ'
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:05:39] "[35m[1mGET /post HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:23] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:23] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:26] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:15:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:07] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:10] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:10] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:16:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:29] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:29] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:40] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:40] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:55] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:17:55] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:05] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:05] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:05] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:11] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:11] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:32] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:19:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:21:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:21:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:21:03] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:21:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:21:13] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:22:28] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:23:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:23:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:23:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:23:43] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:25:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:25:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:25:39] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:25:48] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:28:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:28:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:28:30] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 60, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:28:37] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /fileUpload [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'upload_file' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:32] "[35m[1mGET /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:34] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:36] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:36] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:38] "GET /write HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:39] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:43] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:43] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:29:52] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:24] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:33] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:32:52] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:16] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:31] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:36:53] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:37:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:37:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:37:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:37:41] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:37:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:29] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:31] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:32] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:43] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:39:58] "[33mGET /style.css HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /fileUpload [POST]
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python38\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\project\221205 flork-flask_board\flask-board-practice - 12월7일수 PM19\app.py", line 53, in upload_file
+    f.save('./static/uploads/' + secure_filename(f.filename))
+NameError: name 'secure_filename' is not defined
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:40:06] "[35m[1mPOST /fileUpload HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:40:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:40:47] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:40:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:40:54] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:40] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:50] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:50] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:42:50] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:44:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:44:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:44:48] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:44:58] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:46:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:46:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:50] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:50] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:48:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:49:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:49:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:49:24] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:49:32] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:50:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:50:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:50:34] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:50:43] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:14] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:36] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:37] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:39] "GET /write HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:54] "[32mPOST /write HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:54] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:55] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:51:59] "GET /post/content/36 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:01] "GET /post/edit/36 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:11] "GET /write HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:14] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:17] "GET /mypage/edit/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:21] "[32mPOST /mypage/edit/Bolee810 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:21] "GET /mypage/Bolee810 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:52:23] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:26] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:27] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:30] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:30] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:32] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:33] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:33] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:35] "GET /write HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:36] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:55:38] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:57:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:57:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:57:26] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:57:32] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:59:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:59:54] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 09:59:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:00:02] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:30] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:47] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:01:57] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:02:22] "GET /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:02:25] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [09/Dec/2022 10:02:36] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m

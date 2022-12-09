@@ -1,6 +1,11 @@
 from flask import Flask, render_template, session, url_for, request, redirect
 import pymysql
 import hashlib
+import os
+try:
+    from werkzeug.utils import secure_filename
+except:
+    from werkzeug import secure_filename
 
 
 # # 로깅시스템 - 시작
@@ -12,7 +17,7 @@ import hashlib
 app = Flask(__name__)
 app.secret_key = '1234'
 
-
+#
 # # 로깅시스템 - 시작
 # logging.basicConfig(filename = "logs/test.log", level = logging.DEBUG)
 #
@@ -24,7 +29,6 @@ app.secret_key = '1234'
 #     log_date = get_log_date()
 #     log_message = "{0}/{1}/{2}/{3}".format(log_date, str(request), error_code, error_message)
 #     logging.error(log_message)
-#
 # def get_log_date():
 #     dt = datetime.datetime.now(timezone("Asia/Seoul"))
 #     log_date = dt.strftime("%Y%m%d_%H:%M:%S")
@@ -35,6 +39,17 @@ app.secret_key = '1234'
 def connectsql():
     conn = pymysql.connect(host='localhost', user = 'root', passwd = '0000', db = 'userlist', charset='utf8')
     return conn
+
+# 파일 업로드 - 시작
+# app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 #파일 업로드 용량 제한 단위:바이트
+#파일 업로드 처리
+@app.route('/upload', methods = ['GET', 'POST'])
+def upload_file():
+	if request.method == 'POST':
+		f = request.files['file']
+		#저장할 경로 + 파일명
+		f.save('./static/uploads/' + secure_filename(f.filename))
+		return render_template('check.html')
 
 @app.route('/')
 # 세션유지를 통한 로그인 유무 확인
@@ -359,4 +374,3 @@ def mycontentedit(user_name):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
