@@ -8,32 +8,32 @@ except:
     from werkzeug import secure_filename
 
 
-# # 로깅시스템 - 시작
-# import logging
-# import datetime
-# from pytz import timezone
-# # 로깅시스템 - 끝 (인터프리터 pytz)
+# 로깅시스템 - 시작
+import logging
+import datetime
+from pytz import timezone
+# 로깅시스템 - 끝 (인터프리터 pytz)
 
 app = Flask(__name__)
 app.secret_key = '1234'
 
-#
-# # 로깅시스템 - 시작
-# logging.basicConfig(filename = "logs/test.log", level = logging.DEBUG)
-#
-# def log(request, message):
-#     log_date = get_log_date()
-#     log_message = "{0}/{1}/{2}".format(log_date, str(request), message)
-#     logging.error(log_message)
-# def error_log(request, error_code, error_message):
-#     log_date = get_log_date()
-#     log_message = "{0}/{1}/{2}/{3}".format(log_date, str(request), error_code, error_message)
-#     logging.error(log_message)
-# def get_log_date():
-#     dt = datetime.datetime.now(timezone("Asia/Seoul"))
-#     log_date = dt.strftime("%Y%m%d_%H:%M:%S")
-#     return log_date
-# # 로깅시스템 - 끝
+
+# 로깅시스템 - 시작
+logging.basicConfig(filename = "logs/test.log", level = logging.DEBUG)
+
+def log(request, message):
+    log_date = get_log_date()
+    log_message = "{0}/{1}/{2}".format(log_date, str(request), message)
+    logging.error(log_message)
+def error_log(request, error_code, error_message):
+    log_date = get_log_date()
+    log_message = "{0}/{1}/{2}/{3}".format(log_date, str(request), error_code, error_message)
+    logging.error(log_message)
+def get_log_date():
+    dt = datetime.datetime.now(timezone("Asia/Seoul"))
+    log_date = dt.strftime("%Y%m%d_%H:%M:%S")
+    return log_date
+# 로깅시스템 - 끝
 
 
 def connectsql():
